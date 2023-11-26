@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <title>Excel Analyzer</title>
+</head>
+<style>
+/* Reset some default styles */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+.upload-section, .analysis-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#analysisResult {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Excel Analyzer</h1>
+    </header>
+    <main>
+        <section class="upload-section">
+            <h2>Upload an Excel File</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" accept=".xlsx, .xls" />
+                <label for="fileInput">Choose a file</label>
+                <button type="submit">Upload and Analyze</button>
+            </form>
+        </section>
+        <section class="analysis-section">
+            <h2>Analysis Result</h2>
+            <div id="analysisResult">
+                <!-- Analysis result will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Excel Analyzer made by vishwas</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
 
